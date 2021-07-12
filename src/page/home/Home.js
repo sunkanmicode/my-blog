@@ -1,5 +1,5 @@
 import Header from '../../header/Header'
-import Post from '../../post/Post';
+import Postz from '../../postz/Postz'
 import Sidebar from '../../sidebar/Sidebar';
 
 import './home.css'
@@ -9,7 +9,7 @@ export default function Home() {
         <>
             <Header />
             <div className='home'>
-                <Post />
+               <Postz />
                 <Sidebar />
             </div>
         </>

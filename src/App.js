@@ -1,5 +1,7 @@
 import Topbar from "./topbar/Topbar";
 import Home from './page/home/Home'
+import Single from "./page/single/Single";
+import Write from "./page/write/Write";
 
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
     <>
       <div>
         <Topbar />
-        <Home />
+        <Write />
       </div>
     </>
     );
