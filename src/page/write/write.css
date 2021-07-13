@@ -3,15 +3,13 @@
 }
 .writeImg{
     margin-left: 150px;
-    width: 70vw;
-    height: 250px;
+    width: 60vw;
+    height: 300px;
     border-radius: 10px;
     object-fit: cover;
 }
 .writeForm{
     position: relative;
-
-
 }
 .writeFormGroup{
     margin-left: 150px;
@@ -41,13 +39,15 @@
 }
 .writeText{
     font-size: 20px;
+    height: 100vh;
 }
 .writeSubmit{
     position: absolute;
-    top: 20px;
+    top: 20%;
     right: 50px;
     color: #fff;
     background-color: teal;
+    padding: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;

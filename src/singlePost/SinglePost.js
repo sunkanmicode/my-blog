@@ -5,7 +5,8 @@ export default function SinglePost() {
         <div className='singlePost'>
             <div className='singlePostWrapper'>
                     <img className='singlePostImg' 
-                    src='https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn2r1MxzDiHSDYyESETkjwWqEUTq5aawAVVeGYf3QSLn9Q3KRi8FZuU61Kt3a-LwXBua0&usqp=CAU"
+                    alt="single post"
                 />
                 <h1 className='singlePostTitle'>
                     Lorem ispum Title.
@@ -27,7 +28,6 @@ export default function SinglePost() {
                 </p>
 
             </div>
-            
         </div>
     )
 }

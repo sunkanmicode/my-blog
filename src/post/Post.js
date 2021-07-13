@@ -4,7 +4,7 @@ export default function Post() {
     return (
         <div className='post'>
            <img className='postImg' 
-                src='https://image.winudf.com/v2/image/Y29tLmxheWxhbGkuQmVhdXRpZnVsb2NlYW53YWxsX3NjcmVlbl8xX2VoOHV5N3Ry/screen-1.jpg?fakeurl=1&type=.jpg' alt='post Image'
+                src='https://image.winudf.com/v2/image/Y29tLmxheWxhbGkuQmVhdXRpZnVsb2NlYW53YWxsX3NjcmVlbl8xX2VoOHV5N3Ry/screen-1.jpg?fakeurl=1&type=.jpg' alt='post pictures'
            />
            <div className='postInfo'>
                <div className='postCats'>

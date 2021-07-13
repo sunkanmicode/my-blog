@@ -3,6 +3,9 @@ import "./write.css"
 export default function Write() {
     return (
         <div className='write'>
+            <img className='writeImg' 
+                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn2r1MxzDiHSDYyESETkjwWqEUTq5aawAVVeGYf3QSLn9Q3KRi8FZuU61Kt3a-LwXBua0&usqp=CAU' alt='picture'
+            />
             <form className='writeFrom'>
                 <div className='writeFormGroup'>
                     <label htmlFor='fileInput'>
@@ -10,6 +13,7 @@ export default function Write() {
                     </label>
                         <input type='file' id='fileInput'  style={{display: "none"}} />
                         <input type='text' placeholder='Title' className='writeInput' autoFocus={true} />
+                    </div>
                     <div className='writeFormGroup'>
                         <textarea placeholder='Tell your story ...'
                             type='text' className='writeInput writeText'
@@ -18,7 +22,6 @@ export default function Write() {
                         <button className='writeSubmit'>
                             Publish
                         </button>
-                </div>
             </form>
         </div>
     )
