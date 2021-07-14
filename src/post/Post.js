@@ -1,25 +1,31 @@
 import './post.css'
+import { Link } from 'react-router-dom'
 
-export default function Post() {
+
+export default function Post({ post }) {
     return (
         <div className='post'>
-           <img className='postImg' 
-                src='https://image.winudf.com/v2/image/Y29tLmxheWxhbGkuQmVhdXRpZnVsb2NlYW53YWxsX3NjcmVlbl8xX2VoOHV5N3Ry/screen-1.jpg?fakeurl=1&type=.jpg' alt='post pictures'
-           />
+            {post.photo && (
+                 <img className='postImg' 
+                 src={post.photo} alt='post pictures'/>
+            )}
+          
            <div className='postInfo'>
                <div className='postCats'>
-                   <span className='postCat'>Music</span>
-                   <span className='postCat'>Life</span>
+                   {post.categories.map((cat)=>{
+                   <span className='postCat'>{cat.name}</span>
+                   })}
                </div>
-               <span className='postTitle'>
-                   lorem ispum dolor sit amet
-               </span>
+               <Link className='link' to={`/post/${post._id}`}>
+                    <span className='postTitle'>
+                        {post.title}
+                    </span>
+               </Link>
                <hr />
-               <span className='postDate'>1 hour ago</span>
+               <span className='postDate'>{new Date(post.createdAt).toDateString()}</span>
            </div>
            <p className='postDesc'>
-           As you begin to work more extensively with JavaScript, you will be likely to find that there are cases where you are reusing identical JavaScript code on multiple pages of a site.You are not restricted to be maintaining identical code in multiple HTML files. The script tag provides a mechanism to allow you to store JavaScript in an external file and then include it into your HTML files.Here is an example to show how you can include an external JavaScript file in your HTML code using script tag and its src attribute.
-           As you begin to work more extensively with JavaScript, you will be likely to find that there are cases where you are reusing identical JavaScript code on multiple pages of a site.You are not restricted to be maintaining identical code in multiple HTML files. The script tag provides a mechanism to allow you to store JavaScript in an external file and then include it into your HTML files.Here is an example to show how you can include an external JavaScript file in your HTML code using script tag and its src attribute.
+           {post.desc}
            </p>
         </div>
     )

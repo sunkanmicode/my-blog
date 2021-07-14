@@ -2,15 +2,14 @@ import React from 'react'
 import Post from '../post/Post'
 import "./postz.css"
 
-export default function Postz() {
+export default function Postz({ posts }) {
     return (
         <div className='postz'>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            {posts.map((p)=>{
+                return(
+                    <Post post={p} />
+                )
+            })}
 
         </div>
     )

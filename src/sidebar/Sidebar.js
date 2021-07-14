@@ -1,6 +1,19 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './sidebar.css'
 
 export default function Sidebar() {
+    const [cats, setCats ] = useState([])
+    
+    const fetchCat = async()=>{
+        const response = await fetch("http://localhost:5000/categories");
+        const data = await response.json();
+        setCats(data);
+    }
+    useEffect(()=>{
+        fetchCat()
+    },[])
+    
     return (
         <div className='sidebar'>
             <div className='sidebarItem'>
@@ -11,11 +24,12 @@ export default function Sidebar() {
             <div className='sidebarItem'>
                 <span className='sidebarTitle'>CATEGORIES</span>
                 <ul className='sidebarList'>
-                    <li className='sidebarListItem'>Life</li>
-                    <li className='sidebarListItem'>Music</li>
-                    <li className='sidebarListItem'>Style</li>
-                    <li className='sidebarListItem'>Tech</li>
-                    <li className='sidebarListItem'>Clenea</li>
+                    {cats.map((cat)=>(
+                        <Link className='link' to={`/?cat=${cat.name}`}>
+                            <li className='sidebarListItem'>{cat.name}</li>  
+                        </Link>
+                         
+                    ))}
                 </ul>
             </div>
             <div className='sidebarItem'>
