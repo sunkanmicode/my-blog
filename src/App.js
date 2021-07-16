@@ -9,12 +9,13 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from 'react-router-dom'
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 
 function App() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <Router>
         <Topbar />
@@ -25,11 +26,6 @@ function App() {
         <Route path='/write'>{user? <Write /> : <Register />}</Route>
         <Route path='/setting'>{user? <Setting /> : <Register />}</Route>
         <Route path='/post/:postId'><Single /></Route>
-
-
-
-
-
       </Switch> 
     </Router>
     );

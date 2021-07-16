@@ -15,14 +15,13 @@ export default function Home() {
 
     //fetch posts
     const fetchPosts = async()=>{
-        const response = await fetch("http://localhost:5000/posts"+search);
+        const response = await fetch(`http://localhost:5000/posts${search}`);
         const data = await response.json()
         setPosts(data);
     }
    
     useEffect(() => {
         fetchPosts()
-        
     }, [search])
     return (
         <>
